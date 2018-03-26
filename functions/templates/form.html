@@ -1,0 +1,27 @@
+
+{% extends "layout.html" %} {% block content %}
+<!-- Form
+	================================================== -->
+<div class="form">
+	<div class="container">
+		<ul id="IRCodeList" class="row"></ul>
+		<div class="row">
+			<div class="col-md-12">
+
+				<form id="addIRCode" class="form-inline">
+					<div class="form-group">
+						<label for="name">名前</label>
+						<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+					</div>
+
+					<div class="form-group">
+						<label for="memo_no">memo_no</label>
+						<input type="text" class="form-control" id="memo_no" name="memo_no" placeholder="memo_no">
+					</div>
+					<button type="submit" class="btn btn-default">送信する</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

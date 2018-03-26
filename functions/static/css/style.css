@@ -1,0 +1,16 @@
+/* .btn {
+  width: 6.5em !important;
+  margin-left:0.5em;
+} */
+
+/* .col {
+  margin-left: 0.5em;
+} */
+
+.row {
+  margin-bottom: 0.5em;
+}
+
+#IRCodeList{
+  list-style-type: none;
+}
