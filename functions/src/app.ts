@@ -45,6 +45,8 @@ app
   .get('/code-from/:memo_no',(req,res)=>{
     const memo_no=req.params.memo_no
     return exec(`python ../python/remocon.py ${memo_no}`)
+      .then(result => console.log(result))
+      
   })
 // .put('/addcode-from/:id',(req,res)=> {
 // 
