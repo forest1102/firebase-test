@@ -12,6 +12,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "@types/swig": "0.0.29",
+    "child-process-promise": "^2.2.1",
     "child_process": "^1.0.2",
     "express": "^4.16.3",
     "firebase-admin": "~5.10.0",

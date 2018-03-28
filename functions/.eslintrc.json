@@ -12,6 +12,7 @@
     "promise"
   ],
   "rules": {
+    "no-implicit-dependencies": false,
     // Removed rule "disallow the use of console" from recommended eslint rules
     "no-console": "off",
 

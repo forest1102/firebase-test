@@ -28,7 +28,7 @@
 # cmd T1_trans_start   0x59 bus-write(ADR,cmd,n)
 #
 from __future__ import print_function
-import smbus
+import smbus2 as smbus
 import time
 from time import sleep
 #import commands

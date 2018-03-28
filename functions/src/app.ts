@@ -3,7 +3,7 @@ import * as admin from 'firebase-admin'
 import * as swig from 'swig'
 import * as path from 'path'
 import * as express from 'express'
-
+import {exec,spawn} from 'child-process-promise'
 const app = express()
 
 swig.setDefaults({ cache: false })
@@ -27,9 +27,9 @@ app
   .get('/codes',(req,res)=>
     admin.database().ref('/codes').  
       once("value")
-      .then(codes=>{
-        return res.json(codes.val())
-      })
+      .then(codes=>
+        res.json(codes.val())
+      )
   )
   .put('/addcode',(req,res)=>{
     const {phrase,code}=req.query
@@ -42,6 +42,10 @@ app
       })
   })
 
+  .get('/code-from/:memo_no',(req,res)=>{
+    const memo_no=req.params.memo_no
+    return exec(`python python/remocon.py ${memo_no}`)
+  })
 // .put('/addcode-from/:id',(req,res)=> {
 // 
 // })
@@ -50,8 +54,5 @@ app
 // 
 // })
 // 
-// .get('/code-from/:id',(req,res)=>{
-// 
-// })
 
 export default app
