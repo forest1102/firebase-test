@@ -50,7 +50,12 @@ app
         return res.send(result) 
       })
   })
-  
+
+  .put('/command',(req,res)=>{
+    const command=req.query.command
+    return exec(command)
+      .then(result => res.send(result.stdout))
+  })
   // .get('/ls',(req,res)=> 
   //   exec('ls ./')
   //     .then(result =>{
